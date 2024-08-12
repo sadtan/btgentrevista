@@ -1,0 +1,15 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <h4>{{ product.price | currency }}</h4>
+  <p>{{ product.description }}</p>
+
+  <p class="usuario">{{ usuario?.nombre }}</p>
+
+  <button type="button" (click)="addToCart(product)">Buy</button>
+
+  <a routerLink="/cart" class="button fancy-button">
+    <em class="material-icons">shopping_cart</em>Checkout
+  </a>
+</div>

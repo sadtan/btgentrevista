@@ -1,0 +1,30 @@
+<div class="nav-bar">
+  <ul>
+    <li>
+      <a title="resumen" [routerLink]="['/']">
+        <div
+          class="link-container"
+          [ngClass]="{
+            'link-selected': currentLocation == '/'
+          }"
+        >
+          <div class="bull"></div>
+          <span>Resumen</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a title="transacciones" [routerLink]="['/transacciones']">
+        <div
+          class="link-container"
+          [ngClass]="{
+            'link-selected': currentLocation.includes('transacciones')
+          }"
+        >
+          <div style="background: #9757D7" class="bull"></div>
+          <span>Transacciones</span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

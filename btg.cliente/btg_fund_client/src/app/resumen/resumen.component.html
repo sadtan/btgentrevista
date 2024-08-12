@@ -1,0 +1,17 @@
+<div class="resumen">
+  <div class="fondos">
+    <h3>Resumen</h3>
+    <div class="fondo">
+      <span>Saldo disponible</span>
+      <span class="total">
+        {{ usuario?.fondos | currency }} 
+        <span class="currency">COP</span>
+      </span>
+    </div>
+  </div>
+  <div class="cuentas">
+    <app-cuenta-list></app-cuenta-list>
+  </div>
+  <div class="fund-list-title">Fondos disponibles</div>
+  <app-fund-list></app-fund-list>
+</div>

@@ -1,0 +1,53 @@
+.resumen {
+  margin: 16px 18px 18px 18px;
+}
+
+@media (min-width: 1120px) {
+  .resumen {
+    margin: 4px 18px 18px 18px;
+  }
+}
+
+.resumen .fund-list-title {
+  padding: 20px 0 8px 0;
+  color: #777e90;
+}
+
+.resumen .fondos {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 32px;
+}
+
+.resumen .fondos .fondo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.resumen .fondos .fondo span:nth-child(1) {
+  font-weight: 600;
+}
+
+.resumen .fondos .fondo .total {
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resumen .fondos .fondo .currency {
+  background-color: #58bd7d;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 1500;
+  color: #fff;
+  padding: 6px 8px;
+}
+
+.resumen .fondos h3 {
+  font-size: 32px;
+  margin: 0 0 20px 0;
+}

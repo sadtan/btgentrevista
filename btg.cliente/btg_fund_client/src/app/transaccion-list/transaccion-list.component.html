@@ -1,0 +1,20 @@
+<div class="transacciones">
+  <div *ngFor="let transaccion of transacciones" class="transaccion">
+    <div class="tipo">{{ transaccion.tipo }}</div>
+
+    <div class="info">
+      <span>{{ transaccion.fecha }}</span>
+      <br />
+      <span> id: {{ transaccion.id }} </span>
+    </div>
+
+    <div
+      class="cantidad"
+      [ngClass]="{
+        negativa: transaccion.monto < 0
+      }"
+    >
+      {{ transaccion.monto | currency }}
+    </div>
+  </div>
+</div>

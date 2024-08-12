@@ -1,0 +1,75 @@
+.transacciones {
+  margin: 16px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 1120px) {
+  .transacciones {
+    margin: 4px 18px 18px 18px;
+  }
+}
+
+.tipo {
+  padding: 12px 0px 12px 12px;
+  grid-area: tipo;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.info {
+  color: #777e90;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 12px 32px 12px 12px;
+  grid-area: id;
+  grid-area: info;
+}
+
+.cantidad {
+  padding: 12px 22px 12px 12px;
+  grid-area: cantidad;
+  text-align: right;
+  margin: auto 0;
+  font-weight: 600;
+  color: green;
+}
+
+.cantidad.negativa {
+  color: red;
+}
+
+.transaccion {
+  background: #fff;
+  border-radius: 12px;
+  gap: 12px;
+  padding: 12px;
+  display: grid;
+  grid-template-areas: "tipo cantidad" "info --";
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+@media (min-width: 820px) {
+  .info {
+    width: 30%;
+    grid-area: none;
+    text-align: right;
+  }
+  .cantidad {
+    width: 15%;
+
+    grid-area: none;
+  }
+  .tipo {
+    width: 220px;
+    grid-area: none;
+  }
+
+  .transaccion {
+    grid-template-areas: none;
+    display: flex;
+    justify-content: space-between;
+    /* grid-template-areas: "tipo cantidad info"; */
+  }
+}

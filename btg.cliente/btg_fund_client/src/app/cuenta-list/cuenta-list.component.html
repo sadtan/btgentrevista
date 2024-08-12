@@ -1,0 +1,38 @@
+<div *ngIf="cuentas.length > 0" class="cuenta-list-title">Mis cuentas</div>
+
+<div class="cuentas">
+  <div *ngFor="let cuenta of cuentas" class="cuenta">
+    <span class="fondo-nombre">
+      {{ getFondo(cuenta.id_fondo)?.nombre }}
+    </span>
+    <span class="cuenta-id">
+      <span style="font-size: 18px">{{ cuenta.estado }}</span>
+      <br />
+
+      id: {{ cuenta.id }}
+      <br />
+      monto mínimo:
+      <span style="font-weight: 700">{{
+        getFondo(cuenta.id_fondo)?.monto_minimo_vinculacion | currency
+      }}</span>
+    </span>
+    <span class="cuenta-balance">
+      {{ cuenta.balance | currency }}
+    </span>
+    <div class="acciones">
+      <button
+        *ngIf="cuenta.estado == 'vinculado'"
+        (click)="actualizarCuenta(cuenta.id, 'desvincular')"
+      >
+        Retirarme
+      </button>
+      <button
+        class="vincular"
+        *ngIf="cuenta?.estado == 'desvinculado'"
+        (click)="actualizarCuenta(cuenta.id, 'vincular')"
+      >
+        Vincularme
+      </button>
+    </div>
+  </div>
+</div>

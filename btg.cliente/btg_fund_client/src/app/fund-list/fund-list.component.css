@@ -1,0 +1,120 @@
+.fondos {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fondo {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.fondo:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.fondo .fondo-property {
+  padding: 12px 12px 12px 22px;
+}
+
+.fondo .fondo-property:nth-child(1) {
+  grid-area: info;
+}
+.fondo .fondo-property:nth-child(2) {
+  font-size: 18px;
+  grid-area: price;
+}
+.fondo .fondo-property:nth-child(3) {
+  grid-area: acciones;
+}
+
+.fondo {
+  display: grid;
+  grid-template-areas:
+    "info"
+    "price"
+    "acciones";
+  gap: 0px 6px;
+  padding: 0;
+  padding: 12px 32px 12px 6px;
+
+  /* grid-template-areas: "info price acciones"; */
+}
+
+@media (min-width: 520px) {
+  .fondo {
+    display: grid;
+    grid-template-areas:
+      "info price"
+      "acciones";
+    gap: 0px 6px;
+    padding: 0;
+    padding: 12px 32px 12px 6px;
+
+    /* grid-template-areas: "info price acciones"; */
+  }
+}
+
+@media (min-width: 860px) {
+  .fondo .fondo-property {
+    padding: 32px 32px 32px 22px;
+  }
+
+  .fondo .fondo-property:nth-child(1) {
+    grid-area: none;
+    width: 40%;
+  }
+  .fondo .fondo-property:nth-child(2) {
+    margin-left: auto;
+    grid-area: none;
+    text-align: right;
+    width: 16%;
+  }
+  .fondo .fondo-property:nth-child(3) {
+    grid-area: none;
+    margin-left: auto;
+    width: 13%;
+  }
+
+  .fondo {
+    grid-template-columns: none;
+    gap: 0px 6px;
+    padding: 12px 22px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.fondo button {
+  align-items: center;
+  background: #58BD7D;
+  border: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  gap: 12px;
+  font-size: 14px;
+  text-wrap: nowrap;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  line-height: 24px;
+  outline: 0;
+  padding: 20px 32px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 20px;
+  -webkit-transition: all 0.18s linear;
+  -ms-transition: all 0.18s linear;
+  transition: all 0.18s linear;
+}

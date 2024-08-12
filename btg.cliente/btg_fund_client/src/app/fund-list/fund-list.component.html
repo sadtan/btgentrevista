@@ -1,0 +1,50 @@
+<div class="fondos">
+  <div *ngFor="let fondo of fondos" class="fondo">
+    <div class="fondo-property">
+      <span style="font-weight: 800; font-size: 24px">{{
+        fondo?.nombre?.replaceAll("_", " ")
+      }}</span
+      ><br />{{ fondo.categoria }}
+    </div>
+    <div class="fondo-property">
+      <span style="font-size: 12px">Monto mínimo</span><br />
+      <span style="font-weight: 600">
+        {{ fondo.monto_minimo_vinculacion | currency }} <br />
+      </span>
+      COP
+    </div>
+
+    <div class="fondo-property">
+      <button
+        (click)="
+          openDialog(fondo.id, fondo.nombre, fondo.monto_minimo_vinculacion)
+        "
+      >
+        Vincularme
+      </button>
+    </div>
+    <!-- [title]="fondo.nombre + ' details'"
+    [routerLink]="['/funds', fondo.id]" -->
+    <!-- <p *ngIf="product.description">Description: {{ product.description }}</p>
+    <button type="button" (click)="share()">Share</button>
+    <app-product-alerts
+    [product]="product"
+    (notify)="onNotify()"
+    ></app-product-alerts> -->
+  </div>
+</div>
+
+<dialog #dialog>
+  <div>
+    Your country:
+    <select>
+      <option value="default">Choose…</option>
+      <option>United States</option>
+      <option>France</option>
+      <option>Australia</option>
+    </select>
+  </div>
+  <div>
+    <button (click)="dialog.close()">OK</button>
+  </div>
+</dialog>

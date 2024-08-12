@@ -1,0 +1,25 @@
+main {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+main {
+  background-color: #f4f5f6;
+}
+
+main .main-layout {
+  display: grid;
+  grid-template-columns: 0.2fr 0fr 1fr;
+  flex-direction: row;
+}
+
+@media (max-width: 1120px) {
+  main .main-layout {
+    display: flex;
+
+    flex-direction: column;
+  }
+  main .main-layout {
+  }
+}

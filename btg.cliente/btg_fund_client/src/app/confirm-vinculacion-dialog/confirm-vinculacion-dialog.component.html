@@ -1,0 +1,48 @@
+<mat-dialog-content>
+  <form [formGroup]="checkoutForm">
+    <div class="content">
+      <h3 class="title">Está vinculandose al fondo: {{ nombre }}</h3>
+      <span class="valor">
+        Valor de vinculación:
+        <span class="cantidad"> {{ cantindad | currency }}</span>
+      </span>
+      Confirmar información de contacto:
+      <table>
+        <tr>
+          <td><label for="correo"> Correo </label></td>
+          <td>
+            <input
+              value="{{ usuario?.correo }}"
+              id="correo"
+              type="text"
+              formControlName="correo"
+              placeholder="{{ usuario?.correo }}"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="numero"> Número Cel </label>
+          </td>
+          <td>
+            <input
+              
+              value="{{ usuario?.celular }}"
+              id="numero"
+              type="text"
+              formControlName="numero"
+              placeholder="Feature not available yet."
+            />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <div class="actions">
+    <button class="cancelar" (click)="close()">Cancelar</button>
+    <button class="" (click)="save()">Vincularme</button>
+  </div>
+</mat-dialog-actions>

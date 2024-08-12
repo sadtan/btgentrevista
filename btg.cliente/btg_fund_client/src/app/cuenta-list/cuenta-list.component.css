@@ -1,0 +1,116 @@
+.cuenta-list-title {
+  padding: 20px 0 8px 0;
+  color: #777e90;
+}
+
+.cuentas {
+  display: flex;
+  border-radius: 12px;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cuenta:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cuentas .cuenta .fondo-nombre {
+  font-weight: 700;
+  font-size: 18px;
+  grid-area: nombre;
+  padding: 12px 32px 12px 6px;
+}
+
+.cuentas .cuenta .cuenta-balance {
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+  grid-area: balance;
+  padding: 12px 32px 6px 6px;
+}
+
+.cuentas .cuenta .acciones {
+  padding: 12px 28px 12px 6px;
+  grid-area: acciones;
+}
+
+.cuentas .cuenta button {
+  align-items: center;
+  border: none;
+  box-sizing: border-box;
+  color: #777e90;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #777e90;
+  gap: 12px;
+  font-size: 12px;
+  text-wrap: nowrap;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  line-height: 24px;
+  outline: 0;
+  padding: 16px 28px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 20px;
+  -webkit-transition: all 0.18s linear;
+  -ms-transition: all 0.18s linear;
+  transition: all 0.18s linear;
+}
+
+.cuentas .cuenta button.vincular {
+  color: #fff;
+  background: #3772FF;
+  border: none;
+  padding: 20px 32px;
+}
+
+.cuentas .cuenta .cuenta-id {
+  font-size: 18px;
+  color: #777e90;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 32px 0px 6px;
+  grid-area: id;
+}
+
+.cuentas .cuenta {
+  padding: 12px 32px 12px 6px;
+  background: #fff;
+  display: grid;
+  grid-template-areas:
+    "nombre"
+    "balance"
+    "id"
+    "acciones";
+  background: #fff;
+  border-radius: 12px;
+  gap: 12px;
+  transition: box-shadow 0.15s ease-in-out;
+  padding: 12px 22px;
+}
+
+@media (min-width: 520px) {
+  .cuentas .cuenta .cuenta-balance {
+    margin-left: auto;
+    padding: 12px 32px 12px 6px;
+  }
+  .cuentas .cuenta .acciones {
+    margin-left: auto;
+    padding: 12px 32px 12px 6px;
+  }
+
+  .cuentas .cuenta .cuenta-id {
+    padding: 12px 32px 12px 6px;
+  }
+  .cuentas .cuenta {
+    grid-template-areas:
+      "nombre balance"
+      "id acciones";
+  }
+}

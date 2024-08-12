@@ -1,0 +1,7 @@
+{
+  "base_url": {
+    "sensitive": false,
+    "type": "string",
+    "value": "https://sakl2k3wztsawwcqu3vt4emliu0lxlhm.lambda-url.us-east-1.on.aws/"
+  }
+}

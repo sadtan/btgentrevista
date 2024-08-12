@@ -1,0 +1,6 @@
+sqlalchemy
+pydantic
+boto3
+requests
+fastapi
+mangum

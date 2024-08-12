@@ -1,0 +1,1 @@
+terraform output -json > ../btg_fund_client/src/app/api_url.json
