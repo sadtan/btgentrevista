@@ -20,6 +20,7 @@ router = APIRouter()
 def read_todo_items():
     return get_items()
 
+
 @router.get("/api/cuentas/{id_cuenta}", response_model=Cuenta)
 def get_cuenta_api(id_cuenta: str):
     log.info("consultando cuenta:" + id_cuenta)
@@ -123,7 +124,7 @@ def crear_cuenta(item: crear_cuenta_request):
         
         send_args = {
             "Source": "sebas99.88@gmail.com",
-            "Destination": {'ToAddresses': ['sebastian.palomino@hpe.com', 'recipient_2@email.com']} ,
+            "Destination": {'ToAddresses': [request['correo'], 'recipient_2@email.com']} ,
             "Message": {
                 "Subject": {"Data": "SUBJECT"},
                 "Body": {"Text": {"Data": "---"}, "Html": {"Data": html}},
